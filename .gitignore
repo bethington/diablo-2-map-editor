@@ -8,6 +8,7 @@
 # Build artifacts
 build/
 obj/
+lib/
 release/
 *.exe
 *.pdb
@@ -24,8 +25,8 @@ tmps/
 *.tmp
 *.temp
 
-# VS Code specific (keep configurations)
-# .vscode/ - Keep this for project settings
+# VS Code specific
+.vscode/
 
 # OS generated files
 .DS_Store
@@ -61,3 +62,6 @@ lib/*.a
 lib/*.so
 lib/*.dll
 !alleg42_import.lib
+
+# Test data files
+tests\TestResults\

@@ -517,7 +517,26 @@ namespace DS1EditorTests
                 header[i] = 0x00;
             }
 
-            File.WriteAllBytes(filePath, header);
+            // Create a minimal image data section to make the file larger than just header
+            var imageDataSize = Math.Max(256, width * height / 8); // Minimal compressed data
+            var imageData = new byte[imageDataSize];
+            
+            // Fill with minimal RLE-encoded data pattern
+            for (int i = 0; i < imageDataSize; i += 2)
+            {
+                if (i + 1 < imageDataSize)
+                {
+                    imageData[i] = 0xC1; // RLE count of 1
+                    imageData[i + 1] = 0x00; // Black pixel
+                }
+            }
+            
+            // Combine header and image data
+            var fullData = new byte[header.Length + imageData.Length];
+            Array.Copy(header, 0, fullData, 0, header.Length);
+            Array.Copy(imageData, 0, fullData, header.Length, imageData.Length);
+            
+            File.WriteAllBytes(filePath, fullData);
         }
 
         private (int Width, int Height) GetPCXDimensions(string filePath)

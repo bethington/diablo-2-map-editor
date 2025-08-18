@@ -1,0 +1,59 @@
+DS1 Editor Master Test Suite Results 
+Test Date: Sun 08/17/2025 21:36:30.36 
+DS1 Editor: C:\Users\benam\source\cpp\Diablo 2 Map Editor\tests\..\release\ds1editor.exe 
+================================= 
+ 
+ 
+================================================================ 
+STARTING COMPREHENSIVE TEST SUITE 
+================================================================ 
+ 
+ 
+================================================================ 
+Functional Tests 
+================================================================ 
+ 
+Starting Functional Tests... 
+Executing: run_functional_tests.bat
+================================================================
+DS1 Editor Functional Test Suite
+================================================================
+
+C:\Users\benam\source\cpp\Diablo 2 Map Editor\tests\output\master_test_results.txt
+Test Environment:
+- DS1 Editor: C:\Users\benam\source\cpp\Diablo 2 Map Editor\tests\..\release\ds1editor.exe
+- Output Dir: C:\Users\benam\source\cpp\Diablo 2 Map Editor\tests\output
+- DS1 Files:  C:\Users\benam\source\cpp\Diablo 2 Map Editor\tests\..\release\ds1
+
+================================================================
+TEST 1: Basic DS1 loading with standard parameters
+================================================================
+Testing: ds1editor.exe Duriel.ds1 17 481
+
+DS1 Editor Test Executable
+==========================
+Arguments received: 4
+  argv[0] = C:\Users\benam\source\cpp\Diablo 2 Map Editor\tests\..\release\ds1editor.exe
+  argv[1] = C:\Users\benam\source\cpp\Diablo 2 Map Editor\tests\..\release\ds1\Duriel.ds1
+  argv[2] = 17
+  argv[3] = 481
+
+Press any key to continue...
+PASSED: Basic DS1 loading test completed successfully
+
+================================================================
+TEST 2: Debug mode test
+================================================================
+Testing: ds1editor.exe Duriel.ds1 17 481 -debug
+
+DS1 Editor Test Executable
+==========================
+Arguments received: 5
+  argv[0] = C:\Users\benam\source\cpp\Diablo 2 Map Editor\tests\..\release\ds1editor.exe
+  argv[1] = C:\Users\benam\source\cpp\Diablo 2 Map Editor\tests\..\release\ds1\Duriel.ds1
+  argv[2] = 17
+  argv[3] = 481
+  argv[4] = -debug
+
+Press any key to continue...
+Terminate batch job (Y/N)? 

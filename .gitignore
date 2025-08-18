@@ -1,0 +1,63 @@
+# Visual Studio / MSBuild
+.vs/
+*.user
+*.suo
+*.vcxproj.user
+*.vcproj.user
+
+# Build artifacts
+build/
+obj/
+release/
+*.exe
+*.pdb
+*.obj
+*.lib
+*.exp
+*.ilk
+*.idb
+
+# Logs and temporary files
+logs/
+tmps/
+*.log
+*.tmp
+*.temp
+
+# VS Code specific (keep configurations)
+# .vscode/ - Keep this for project settings
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*~
+*.orig
+
+# Don't ignore essential files
+!release/ds1editor.exe
+!release/ds1edit.ini
+!release/*.bat
+!release/Data/
+!release/Demo_data/
+!release/ds1/
+!release/pcx/
+!*.c
+!*.h
+!README*
+!docs/
+
+# Ignore compiled allegro but keep import lib
+lib/*.a
+lib/*.so
+lib/*.dll
+!alleg42_import.lib

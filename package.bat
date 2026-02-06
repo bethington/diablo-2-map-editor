@@ -17,7 +17,7 @@ REM Create release structure
 echo Creating release directory structure...
 mkdir "release"
 mkdir "release\Data"
-mkdir "release\Demo_data"
+mkdir "release\data"
 mkdir "release\ds1"
 mkdir "release\pcx"
 mkdir "release\docs"
@@ -30,7 +30,7 @@ copy "bin\ds1edit.ini" "release\" >nul
 REM Copy data directories
 echo Copying data files...
 xcopy "bin\Data" "release\Data" /e /i /q >nul 2>&1
-xcopy "bin\Demo_data" "release\Demo_data" /e /i /q >nul 2>&1
+xcopy "bin\data" "release\data" /e /i /q >nul 2>&1
 xcopy "bin\ds1" "release\ds1" /e /i /q >nul 2>&1
 xcopy "bin\pcx" "release\pcx" /e /i /q >nul 2>&1
 
@@ -59,7 +59,7 @@ echo   ds1editor.exe     - Main executable
 echo   ds1edit.ini       - Configuration file
 echo   *.bat             - Launch scripts for sample maps
 echo   Data\             - Core Diablo 2 data files
-echo   Demo_data\        - Sample mod data
+echo   data\        - Game asset data
 echo   ds1\              - Sample DS1 map files
 echo   pcx\              - Interface graphics
 echo   docs\             - Documentation and tutorials

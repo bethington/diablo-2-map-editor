@@ -49,7 +49,7 @@ Desktop.ini
 !release/ds1edit.ini
 !release/*.bat
 !release/Data/
-!release/Demo_data/
+!release/data/
 !release/ds1/
 !release/pcx/
 !*.c
@@ -65,3 +65,9 @@ lib/*.dll
 
 # Test data files
 tests\TestResults\
+
+# Large NuGet packages (too big for GitHub)
+Allegro.5.2.10/
+AllegroDeps.1.15.0/
+*.nupkg
+ds1/

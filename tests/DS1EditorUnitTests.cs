@@ -572,7 +572,7 @@ namespace DS1EditorTests
                         await Task.Delay(1000); // Wait a bit for the process to start
                         try
                         {
-                            if (!process.HasExited)
+                            if (process != null && !process.HasExited)
                             {
                                 // Send ESC key sequence to exit
                                 await process.StandardInput.WriteLineAsync("");
@@ -588,7 +588,7 @@ namespace DS1EditorTests
                     // Read output asynchronously
                     var outputTask = Task.Run(async () =>
                     {
-                        string line;
+                        string? line;
                         while ((line = await process.StandardOutput.ReadLineAsync()) != null)
                         {
                             output.Add(line);
@@ -597,7 +597,7 @@ namespace DS1EditorTests
 
                     var errorTask = Task.Run(async () =>
                     {
-                        string line;
+                        string? line;
                         while ((line = await process.StandardError.ReadLineAsync()) != null)
                         {
                             output.Add($"ERROR: {line}");
@@ -605,7 +605,7 @@ namespace DS1EditorTests
                     });
 
                     // Wait for process completion or timeout
-                    if (!process.WaitForExit(timeoutMs))
+                    if (process != null && !process.WaitForExit(timeoutMs))
                     {
                         process.Kill();
                         output.Add("Process timed out and was killed");

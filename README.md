@@ -116,7 +116,7 @@ Diablo 2 Map Editor/
 │   ├── ds1editor.exe      # Main executable
 │   ├── ds1edit.ini        # Configuration file
 │   ├── Data/              # Core Diablo 2 data files
-│   ├── Demo_data/         # Sample mod data
+│   ├── data/             # Game asset data
 │   ├── ds1/               # Sample DS1 map files
 │   └── *.bat              # Launch scripts
 ├── src/                   # Source code
@@ -144,7 +144,7 @@ full_screen = NO          # Use windowed mode
 color_depth = 8           # Color depth (8, 16, 24, 32)
 
 # Data paths
-mod_dir = Demo_data       # Mod directory for assets
+mod_dir = data           # Mod directory for assets
 ```
 
 ### Asset Directories

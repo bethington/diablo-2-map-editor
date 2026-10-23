@@ -22,14 +22,11 @@ A comprehensive map editor for Diablo 2 DS1 (map) files, featuring full support 
 
 ## Quick Start
 
-### Using Pre-built Release
+### Using a Pre-built Release
 
-1. Download the latest release from the `release/` folder
-2. Extract all files to a directory
-3. Run any of the `.bat` files to load example maps:
-   - `Duriel.bat` - Duriel's chamber (Act 2)
-   - `Tristram.bat` - Tristram (Act 1)
-   - `Harogath.bat` - Barbarian town (Act 5)
+> **There is currently no published release.** No GitHub release has been cut and the
+> `release/` folder is not part of this repository, so there is no prebuilt executable to
+> download yet. Build from source for now (see below) - a prebuilt release is on the way.
 
 ### Building from Source
 
